@@ -5,9 +5,9 @@
   <subtitle>Lover &amp;&amp; Sharer</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://nomessages.github.io.git/"/>
   <updated>2020-06-12T02:13:33.033Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://nomessages.github.io.git/</id>
   
   <author>
     <name>Rocy</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>second post</title>
-    <link href="http://yoursite.com/2020/06/12/second-post/"/>
-    <id>http://yoursite.com/2020/06/12/second-post/</id>
+    <link href="https://nomessages.github.io.git/2020/06/12/second-post/"/>
+    <id>https://nomessages.github.io.git/2020/06/12/second-post/</id>
     <published>2020-06-12T02:13:00.000Z</published>
     <updated>2020-06-12T02:13:33.033Z</updated>
     
@@ -28,21 +28,21 @@
     </summary>
     
     
-      <category term="all" scheme="http://yoursite.com/categories/all/"/>
+      <category term="all" scheme="https://NoMessages.github.io.git/categories/all/"/>
     
     
-      <category term="spring" scheme="http://yoursite.com/tags/spring/"/>
+      <category term="spring" scheme="https://NoMessages.github.io.git/tags/spring/"/>
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="linux" scheme="https://NoMessages.github.io.git/tags/linux/"/>
     
-      <category term="spring boot" scheme="http://yoursite.com/tags/spring-boot/"/>
+      <category term="spring boot" scheme="https://NoMessages.github.io.git/tags/spring-boot/"/>
     
   </entry>
   
   <entry>
     <title>My-Fir-Page</title>
-    <link href="http://yoursite.com/2020/06/11/my-fir-page/"/>
-    <id>http://yoursite.com/2020/06/11/my-fir-page/</id>
+    <link href="https://nomessages.github.io.git/2020/06/11/my-fir-page/"/>
+    <id>https://nomessages.github.io.git/2020/06/11/my-fir-page/</id>
     <published>2020-06-11T02:58:57.870Z</published>
     <updated>2020-06-12T02:13:50.214Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2020/06/11/hello-world/"/>
-    <id>http://yoursite.com/2020/06/11/hello-world/</id>
+    <link href="https://nomessages.github.io.git/2020/06/11/hello-world/"/>
+    <id>https://nomessages.github.io.git/2020/06/11/hello-world/</id>
     <published>2020-06-11T00:32:35.889Z</published>
     <updated>2020-06-11T00:32:35.889Z</updated>
     

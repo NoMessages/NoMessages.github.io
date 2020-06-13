@@ -587,8 +587,8 @@
 <p>@RequestMapping(“/hello”)<br>    public String hello(){<br>        System.out.println(“hello方法。。。”);<br>        return “success”;<br>    }</p>
 </blockquote>
 <p><strong>注意：小编在index.jsp和success.jsp中都输出了一句话以证明拦截器的执行流程</strong></p>
-<h5 id="3-拦截器执行过程"><a href="#3-拦截器执行过程" class="headerlink" title="3).拦截器执行过程"></a>3).拦截器执行过程</h5><p><img src="https://img-blog.csdnimg.cn/20200528194212163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>控制台打印，首先走的是preHandle方法，其次就是controller,然后走的postHandle方法，再走的controller的视图解析器，最后走的afterHandle方法</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200528195846130.png" alt="在这里插入图片描述"><br><strong>注意：最后显示的视图是index.jsp视图，原因是 如果postHandler中指定了跳转的页面，那么controller方法跳转的页面将不会显示，所以最终显示的是index.jsp界面</strong><br><img src="https://img-blog.csdnimg.cn/20200528200159121.png" alt="在这里插入图片描述"></p>
+<h5 id="3-拦截器执行过程"><a href="#3-拦截器执行过程" class="headerlink" title="3).拦截器执行过程"></a>3).拦截器执行过程</h5><p><img src="https://img-blog.csdnimg.cn/20200528194212163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt><br><strong>控制台打印，首先走的是preHandle方法，其次就是controller,然后走的postHandle方法，再走的controller的视图解析器，最后走的afterHandle方法</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200528195846130.png" alt><br><strong>注意：最后显示的视图是index.jsp视图，原因是 如果postHandler中指定了跳转的页面，那么controller方法跳转的页面将不会显示，所以最终显示的是index.jsp界面</strong><br><img src="https://img-blog.csdnimg.cn/20200528200159121.png" alt="在这里插入图片描述"></p>
 <h5 id="4-单个拦截器使用总结"><a href="#4-单个拦截器使用总结" class="headerlink" title="4).单个拦截器使用总结"></a>4).单个拦截器使用总结</h5><blockquote>
 <ol>
 <li>preHandle方法是controller方法执行前拦截的方法<ol>
@@ -608,12 +608,12 @@
 </li>
 </ol>
 </blockquote>
-<h3 id="3-、多个拦截器定义的使用"><a href="#3-、多个拦截器定义的使用" class="headerlink" title="3)、多个拦截器定义的使用"></a>3)、多个拦截器定义的使用</h3><h5 id="1-执行顺序？"><a href="#1-执行顺序？" class="headerlink" title="1).执行顺序？"></a>1).执行顺序？</h5><p><strong>a).多个拦截器全部都放行的执行顺序：</strong><br><img src="https://img-blog.csdnimg.cn/20200528204821734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="3-、多个拦截器定义的使用"><a href="#3-、多个拦截器定义的使用" class="headerlink" title="3)、多个拦截器定义的使用"></a>3)、多个拦截器定义的使用</h3><h5 id="1-执行顺序？"><a href="#1-执行顺序？" class="headerlink" title="1).执行顺序？"></a>1).执行顺序？</h5><p><strong>a).多个拦截器全部都放行的执行顺序：</strong><br><img src="https://img-blog.csdnimg.cn/20200528204821734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
 <blockquote>
 <p>拦截器111开始执行咯。。<br>拦截器2开始执行咯。。<br>hello方法。。。<br>拦截器执2行完咯。。<br>拦截器执2行完之后咯。。<br>拦截器111执行完之后咯。。</p>
 </blockquote>
 <p><strong>b).多个拦截器后者不放行的执行顺序：</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20200528205907818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200528205907818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
 <blockquote>
 <p>控制台打印：<br>拦截器111开始执行咯。。<br>拦截器2开始执行咯。。<br>拦截器111执行完之后咯。。</p>
 </blockquote>
@@ -855,7 +855,7 @@
         clientID: '46c67156698bb2009aaf',
         clientSecret: '3f175d7530662a23f65e10f03102302f299a8ca2',
         repo: 'gitalk-commnet',
-        owner: 'NoMessages',
+        owner: '1051141360@qq.com',
         admin: "1051141360@qq.com",
         id: '2020-06-11T09-25-00',
         distractionFreeMode: false  // Facebook-like distraction free mode

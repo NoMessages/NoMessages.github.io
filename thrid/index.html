@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Share Cat" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -63,23 +63,35 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/tags" class="waves-effect waves-light">
+    <a href="" class="waves-effect waves-light">
+
       
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      <i class="fas fa-book" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>Starts</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
     </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/categories" class="waves-effect waves-light">
+    <ul class="sub-nav menus_item_child ">
       
-      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      <li>
+        <a href="/tags">
+          
+          <i class="fas fa-tags" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Tags</span>
+        </a>
+      </li>
       
-      <span>Categories</span>
-    </a>
+      <li>
+        <a href="/categories">
+          
+          <i class="fas fa-bookmark" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>Categories</span>
+        </a>
+      </li>
+      
+    </ul>
     
   </li>
   
@@ -127,6 +139,17 @@
     
   </li>
   
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/404" class="waves-effect waves-light">
+      
+      <i class="fas fa-heartbeat" style="zoom: 0.6;"></i>
+      
+      <span>404Pages</span>
+    </a>
+    
+  </li>
+  
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
@@ -166,23 +189,36 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/tags" class="waves-effect waves-light">
+		<a href="javascript:;">
 			
-			    <i class="fa-fw fas fa-tags"></i>
+				<i class="fa-fw fas fa-book"></i>
 			
-			Tags
+			Starts
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
 		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/categories" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-bookmark"></i>
-			
-			Categories
-		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/tags " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-tags" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Tags</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a href="/categories " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-bookmark" style="position: absolute;left:50px" ></i>
+			      
+		          <span>Categories</span>
+                  </a>
+                </li>
+              
+            </ul>
           
         </li>
         
@@ -226,6 +262,17 @@
 			    <i class="fa-fw fas fa-address-book"></i>
 			
 			Friends
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/404" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-heartbeat"></i>
+			
+			404Pages
 		</a>
           
         </li>
@@ -720,85 +767,12 @@
     
 
     
-        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
-<link rel="stylesheet" href="/css/gitment.css">
-
-<div class="gitment-card card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="gitment-content" class="card-content"></div>
-</div>
-
-<script src="/libs/gitment/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-    id: 'Fri Jun 12 2020 16:41:25 GMT+0800',
-    owner: 'NoMessages',
-    repo: 'nomessages.github.io',
-    oauth: {
-        client_id: '46c67156698bb2009aaf',
-        client_secret: '3f175d7530662a23f65e10f03102302f299a8ca2'
-    }
-});
-
-gitment.render('gitment-content');
-</script>
 
     
 
     
 
     
-
-    
-
-    
-        <style>
-    .mvaline-card {
-        margin: 1.5rem auto;
-    }
-
-    .mvaline-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-</style>
-
-<div class="card mvaline-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="mvcomments" class="card-content" style="display: grid">
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/minivaline/dist/MiniValine.min.js"></script>
-<script>
-    new MiniValine({
-        el: '#mvcomments',
-        appId: 'zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz',
-        appKey: 'itmzT1JbXfAjVwMqDhGPzU45',
-        mode: 'DesertsP',
-        placeholder: 'Write a Comment',
-        pathname: window.location.pathname,
-        lang: '',
-        adminEmailMd5: 'de8a7aa53d07e6b6bceb45c64027763d',
-        tagMeta: ["管理员", "小伙伴", "访客"],
-        master: ["de8a7aa53d07e6b6bceb45c64027763d"],
-        friends: ["b5bd5d836c7a0091aa8473e79ed4c25e", "adb7d1cd192658a55c0ad22a3309cecf", "3ce1e6c77b4910f1871106cb30dc62b0", "cfce8dc43725cc14ffcd9fb4892d5bfc"],
-        math: true,
-        md: true,
-        enableQQ: true,
-        NoRecordIP: false,
-        visitor: true,
-        maxNest: 6,
-        pageSize: 6,
-        serverURLs: '',
-        emoticonUrl: ["https://cdn.jsdelivr.net/npm/alus@latest", "https://cdn.jsdelivr.net/gh/MiniValine/qq@latest", "https://cdn.jsdelivr.net/gh/MiniValine/Bilibilis@latest", "https://cdn.jsdelivr.net/gh/MiniValine/tieba@latest", "https://cdn.jsdelivr.net/gh/MiniValine/twemoji@latest", "https://cdn.jsdelivr.net/gh/MiniValine/weibo@latest"],
-    });
-</script>
 
     
 
@@ -972,8 +946,8 @@ gitment.render('gitment-content');
             tocSelector: '#toc-content',
             contentSelector: '#articleContent',
             headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
+            collapseDepth: Number('10'),
+            headingSelector: 'h1,h2, h3, h4,h5,h6'
         });
 
         // modify the toc link href to support Chinese.
@@ -985,7 +959,7 @@ gitment.render('gitment-content');
 
         // modify the heading title id to support Chinese.
         i = 0;
-        $('#articleContent').children('h2, h3, h4').each(function () {
+        $('#articleContent').children('h1,h2, h3, h4,h5,h6').each(function () {
             $(this).attr('id', tocHeading + (++i));
         });
 
@@ -1111,7 +1085,7 @@ gitment.render('gitment-content');
                         <a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
                         <br>
                         
-                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">1.1k</span>&nbsp;字
+                            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">1k</span>&nbsp;字
                             
                                 
                                     
@@ -1253,9 +1227,20 @@ $(function () {
     
 
     
-
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
     
 
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     

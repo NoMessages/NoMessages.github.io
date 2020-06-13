@@ -709,7 +709,7 @@
         clientID: '46c67156698bb2009aaf',
         clientSecret: '3f175d7530662a23f65e10f03102302f299a8ca2',
         repo: 'nomessages.github.io',
-        owner: '1051141360@qq.com',
+        owner: 'NoMessages',
         admin: "1051141360@qq.com",
         id: '2020-06-12T09-46-21',
         distractionFreeMode: false  // Facebook-like distraction free mode
@@ -719,6 +719,33 @@
 </script>
 
     
+
+    
+        <link rel="stylesheet" href="/libs/gitment/gitment-default.css">
+<link rel="stylesheet" href="/css/gitment.css">
+
+<div class="gitment-card card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitment-content" class="card-content"></div>
+</div>
+
+<script src="/libs/gitment/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+    id: 'Fri Jun 12 2020 09:46:21 GMT+0800',
+    owner: 'NoMessages',
+    repo: 'nomessages.github.io',
+    oauth: {
+        client_id: '46c67156698bb2009aaf',
+        client_secret: '3f175d7530662a23f65e10f03102302f299a8ca2'
+    }
+});
+
+gitment.render('gitment-content');
+</script>
 
     
 

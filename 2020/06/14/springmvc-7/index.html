@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="thrid, Share Cat">
+    <meta name="keywords" content="SpringMVC 学习心得（七）, Share Cat">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>thrid | Share Cat</title>
+    <title>SpringMVC 学习心得（七） | Share Cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -356,12 +356,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">thrid</h1>
+                    <h1 class="description center-align post-title">SpringMVC 学习心得（七）</h1>
                 </div>
             </div>
         </div>
@@ -476,12 +476,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
+                            </a>
+                        
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                SpringMVC
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -490,28 +511,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    916
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -526,7 +547,122 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p><strong>小编一路学习过来整理了文件上传的演化过程，随着框架的使用，使得文件上传的过程越来越简化方便，也正是因为框架的帮助，使得开发更加的简洁，下面小编整理了整个文件上传的变化过程！</strong></p>
+<h2 id="1-、普通文件上传"><a href="#1-、普通文件上传" class="headerlink" title="1)、普通文件上传"></a>1)、普通文件上传</h2><h5 id="1-普通文件上传代码如下"><a href="#1-普通文件上传代码如下" class="headerlink" title="1.普通文件上传代码如下"></a><strong>1.普通文件上传代码如下</strong></h5><pre class=" language-java"><code class="language-java"> <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/testFileUp"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">testFileUp</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">// 获取原生真实路径</span>
+        String realPath <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRealPath</span><span class="token punctuation">(</span><span class="token string">"/uploads/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//创建文件 ， 判断是否存在此文件夹</span>
+        File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>realPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>file<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">boolean</span> mkdirs <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">mkdirs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"isCreating? "</span><span class="token operator">+</span>mkdirs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">//打印文件地址便于查看</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"file exitst ..."</span> <span class="token operator">+</span> realPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//配置DiskFile工厂</span>
+        DiskFileItemFactory factory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DiskFileItemFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//使用Servlet</span>
+        ServletFileUpload fileUpload <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ServletFileUpload</span><span class="token punctuation">(</span>factory<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//解析request</span>
+        List<span class="token operator">&lt;</span>FileItem<span class="token operator">></span> items <span class="token operator">=</span>  fileUpload<span class="token punctuation">.</span><span class="token function">parseRequest</span><span class="token punctuation">(</span>request<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//判断文件是什么类型的</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>FileItem item <span class="token operator">:</span> items<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">isFormField</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment" spellcheck="true">//普通类型</span>
+                String name <span class="token operator">=</span> item<span class="token punctuation">.</span><span class="token function">getFieldName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>name<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//输出表单字段的值</span>
+                    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">"上传了文件。"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"文件字段"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//文件类型</span>
+                <span class="token comment" spellcheck="true">//1.获取文件名字</span>
+                String name <span class="token operator">=</span> item<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//添加一个随机值与文件名拼串</span>
+                String s <span class="token operator">=</span> UUID<span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//拼串</span>
+                name <span class="token operator">=</span> s<span class="token operator">+</span><span class="token string">"_"</span><span class="token operator">+</span>name<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//上传文件</span>
+                item<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>realPath<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//删除零食文件</span>
+                item<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<h2 id="2-、SpringMVC文件上传"><a href="#2-、SpringMVC文件上传" class="headerlink" title="2)、SpringMVC文件上传"></a>2)、SpringMVC文件上传</h2><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/testFileUp2"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">testFileUp2</span><span class="token punctuation">(</span>HttpServletRequest request<span class="token punctuation">,</span> MultipartFile filename<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//原生实现文件上传</span>
+        <span class="token comment" spellcheck="true">// 获取原生真实路径</span>
+        String realPath <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getServletContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getRealPath</span><span class="token punctuation">(</span><span class="token string">"/uploads/"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//创建文件 ， 判断是否存在此文件夹</span>
+        File file <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>realPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>file<span class="token punctuation">.</span><span class="token function">exists</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">boolean</span> mkdirs <span class="token operator">=</span> file<span class="token punctuation">.</span><span class="token function">mkdirs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"isCreating?"</span><span class="token operator">+</span>mkdirs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"file exitst ..."</span> <span class="token operator">+</span> realPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//获取到上传文件的名称 == item.getFileName()</span>
+                String name <span class="token operator">=</span> filename<span class="token punctuation">.</span><span class="token function">getOriginalFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                String s <span class="token operator">=</span> UUID<span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                name <span class="token operator">=</span> s<span class="token operator">+</span><span class="token string">"_"</span><span class="token operator">+</span>name<span class="token punctuation">;</span>
+                <span class="token comment" spellcheck="true">//上传文件</span>
+            filename<span class="token punctuation">.</span><span class="token function">transferTo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>realPath<span class="token punctuation">,</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span></code></pre>
+<ul>
+<li>补充：SpringMVC提供了了<strong>MultipartFile</strong>对象，该对象表示上传的文件，要求变量名称必须和表单<strong>file</strong>标签的<strong>name</strong>属性名称相同</li>
+<li><strong>可以通过配置配置文件的方式限制文件上传限制（ID必须为multipartResolver）</strong></li>
+</ul>
+<pre class=" language-java"><code class="language-java"> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 配置文件管理器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"multipartResolver"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.multipart.commons.CommonsMultipartResolver"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"maxUploadSize"</span> value<span class="token operator">=</span><span class="token string">"#{1024 * 10 * 100}"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span></code></pre>
+<h2 id="3-、跨服务器文件上传"><a href="#3-、跨服务器文件上传" class="headerlink" title="3)、跨服务器文件上传"></a>3)、跨服务器文件上传</h2><h4 id="1-文件上传逻辑图"><a href="#1-文件上传逻辑图" class="headerlink" title="1).文件上传逻辑图"></a>1).文件上传逻辑图</h4><p><img src="https://img-blog.csdnimg.cn/20200528112838469.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
+<h4 id="2-导入jersey坐标，用来实现跨服务器上传"><a href="#2-导入jersey坐标，用来实现跨服务器上传" class="headerlink" title="2).导入jersey坐标，用来实现跨服务器上传"></a>2).导入jersey坐标，用来实现跨服务器上传</h4><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+      <span class="token operator">&lt;</span>groupId<span class="token operator">></span>com<span class="token punctuation">.</span>sun<span class="token punctuation">.</span>jersey<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>jersey<span class="token operator">-</span>core<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">1.18</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+    <span class="token operator">&lt;</span>groupId<span class="token operator">></span>com<span class="token punctuation">.</span>sun<span class="token punctuation">.</span>jersey<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>jersey<span class="token operator">-</span>client<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">1.18</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span> 
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></code></pre>
+<h4 id="3-跨服务器代码实现"><a href="#3-跨服务器代码实现" class="headerlink" title="3).跨服务器代码实现"></a>3).跨服务器代码实现</h4><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/testFileUp3"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">testFileUp3</span><span class="token punctuation">(</span> MultipartFile upload<span class="token punctuation">)</span> <span class="token keyword">throws</span> Exception <span class="token punctuation">{</span>
+
+        <span class="token comment" spellcheck="true">//自定义路径</span>
+        String path <span class="token operator">=</span> <span class="token string">"http://localhost:9090/uploads/"</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//获取文件名</span>
+        String name <span class="token operator">=</span> upload<span class="token punctuation">.</span><span class="token function">getOriginalFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        String s <span class="token operator">=</span> UUID<span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replaceAll</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        name <span class="token operator">=</span> s<span class="token operator">+</span><span class="token string">"_"</span><span class="token operator">+</span>name<span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">//创建客户端对象 </span>
+       Client client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Client</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//com.sun.jersey.api.client.Client; 注意是jerse包下的Client</span>
+        <span class="token comment" spellcheck="true">//连接图片服务器</span>
+        WebResource webResource <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">resource</span><span class="token punctuation">(</span>path <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//因为path后面加了 ‘/ ’ 所以这里直接拼接就行了 </span>
+
+        <span class="token comment" spellcheck="true">//上传文件</span>
+        webResource<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>upload<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//提交字节上传文件</span>
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span></code></pre>
+<h4 id="4-可能会出现的异常"><a href="#4-可能会出现的异常" class="headerlink" title="4).可能会出现的异常"></a>4).可能会出现的异常</h4><p><strong>1）、403：return a response status of 403 Forbidden</strong><br><img src="https://img-blog.csdnimg.cn/20200528121950122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt><br><strong>原因：在tomcat中，是由于”写入”访问被禁止而造成的，当试图将文件上载到目录或在目录中修改文件，但该目录不允许”写”访问时就会出现此种错误。</strong></p>
+<p><strong>解决：修改为可接受传入即可，即将value改为false</strong><br><img src="https://img-blog.csdnimg.cn/20200528123412403.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
+<p><strong>2）、500：org.springframework.web.multipart.MaxUploadsSizeExceedException</strong><br><img src="https://img-blog.csdnimg.cn/20200528122156221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt><br><strong>原因：小编之前定义的最大上传文件大小字节为1024*1000所以只有1024000个字节大小，但是图片的大小为1314599个字节大小，所以上传就没有成功，所以这个异常修改上传最大字节即可</strong></p>
+<p><strong>解决：修改最大值即可</strong><br><img src="https://img-blog.csdnimg.cn/20200528123530209.png" alt></p>
+<h4 id="5-最终效果图"><a href="#5-最终效果图" class="headerlink" title="5).最终效果图"></a>5).最终效果图</h4><p><img src="https://img-blog.csdnimg.cn/20200528125629862.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt><br><strong>上传成功！</strong><br><img src="https://img-blog.csdnimg.cn/20200528125703584.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
+
             </div>
             <hr/>
 
@@ -551,7 +687,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://NoMessages.github.io.git/thrid/index.html">https://NoMessages.github.io.git/thrid/index.html</a>
+                    <a href="https://NoMessages.github.io.git/2020/06/14/springmvc-7/">https://NoMessages.github.io.git/2020/06/14/springmvc-7/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -588,7 +724,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -757,7 +901,7 @@
         repo: 'NoMessages.github.io',
         owner: 'NoMessages',
         admin: '"1051141360@qq.com"',
-        id: '2020 - 06 - 12T16 - 41 - 25 ',
+        id: '2020 - 06 - 14T11 - 07 - 02 ',
         distractionFreeMode: false // Facebook-like distraction free mode
     });
 
@@ -785,34 +929,54 @@
                 <i class="far fa-dot-circle"></i>&nbsp;Current
             </div>
             <div class="card">
-                <a href="/thrid/index.html">
+                <a href="/2020/06/14/springmvc-7/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="thrid">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC 学习心得（七）">
                         
-                        <span class="card-title">thrid</span>
+                        <span class="card-title">SpringMVC 学习心得（七）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            小编一路学习过来整理了文件上传的演化过程，随着框架的使用，使得文件上传的过程越来越简化方便，也正是因为框架的帮助，使得开发更加的简洁，下面小编整理了整个文件上传的变化过程！
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -820,37 +984,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/thrid/index.html">
+                <a href="/2020/06/14/springmvc-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="thrid">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SpringMVC 学习心得（六）">
                         
-                        <span class="card-title">thrid</span>
+                        <span class="card-title">SpringMVC 学习心得（六）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            DispatcherServlet会拦截到所有的资源，导致一个问题就是静态资源（img、css、js）也会被拦截到，从而不能被使用...
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
+                            <a href="/categories/SpringMVC/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="thrid, Share Cat">
+    <meta name="keywords" content="SpringMVC 学习心得（一）, Share Cat">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>thrid | Share Cat</title>
+    <title>SpringMVC 学习心得（一） | Share Cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -356,12 +356,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">thrid</h1>
+                    <h1 class="description center-align post-title">SpringMVC 学习心得（一）</h1>
                 </div>
             </div>
         </div>
@@ -476,12 +476,33 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
+                            </a>
+                        
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                SpringMVC
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -490,28 +511,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    5 Min
                 </div>
                 
 
@@ -526,7 +547,117 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p><strong>在小编总结完Spring的学习笔记之后，紧接着更新SpringMVC的学习笔记，也正是因为SpringMVC是基于Spring的，在整理Spring学习心得的过程中，有很多半懵半懂的地方在整理的过程中慢慢理解，慢慢强化自己的知识点，也是小编在不断测试中不断尝试才整理出来的一套Spring学习心得（这里确实用了很久很久的时间），现在虽然小编对于SpringMVC还有些许地方不太懂，但是希望在自己整理的过程中，通过自己的不断尝试测试，整理出正确的一套SpringMVC知识点</strong></p>
+<h2 id="1-三层架构和MVC"><a href="#1-三层架构和MVC" class="headerlink" title="1.三层架构和MVC"></a>1.三层架构和MVC</h2><h5 id="1-1-三层架构"><a href="#1-1-三层架构" class="headerlink" title="1. 1 三层架构"></a><strong>1. 1 三层架构</strong></h5><pre class=" language-swift"><code class="language-swift"><span class="token number">1</span><span class="token punctuation">.</span> 咱们开发服务器端程序，一般都基于两种形式，一种C<span class="token operator">/</span><span class="token builtin">S架构程序，一种B</span><span class="token operator">/</span>S架构程序
+<span class="token number">2</span><span class="token punctuation">.</span> 使用<span class="token builtin">Java语言基本上都是开发B</span><span class="token operator">/</span><span class="token builtin">S架构的程序，B</span><span class="token operator">/</span>S架构又分成了三层架构
+<span class="token number">3</span><span class="token punctuation">.</span> 三层架构
+    <span class="token number">1</span><span class="token punctuation">.</span> 表现层：<span class="token constant">WEB</span>层，用来和客户端进行数据交互的。表现层一般会采用<span class="token constant">MVC</span>的设计模型
+    <span class="token number">2</span><span class="token punctuation">.</span> 业务层：处理公司具体的业务逻辑的
+    <span class="token number">3</span><span class="token punctuation">.</span> 持久层：用来操作数据库的</code></pre>
+<h5 id="1-2-MVC模型"><a href="#1-2-MVC模型" class="headerlink" title="1.2 MVC模型"></a><strong>1.2 MVC模型</strong></h5><pre class=" language-swift"><code class="language-swift"><span class="token number">1</span><span class="token punctuation">.</span> <span class="token constant">MVC</span>全名是<span class="token builtin">Model</span> <span class="token builtin">View</span> <span class="token builtin">Controller</span> 模型视图控制器，每个部分各司其职。
+<span class="token number">2</span><span class="token punctuation">.</span> <span class="token builtin">Model：数据模型，JavaBean</span>的类，用来进行数据封装。
+<span class="token number">3</span><span class="token punctuation">.</span> <span class="token builtin">View</span>：指<span class="token constant">JSP</span>、<span class="token constant">HTML</span>用来展示数据给用户
+<span class="token number">4</span><span class="token punctuation">.</span> <span class="token builtin">Controller</span>：用来接收用户的请求，整个流程的控制器。用来进行数据校验等。</code></pre>
+<h2 id="2-SpringMVC环境搭建"><a href="#2-SpringMVC环境搭建" class="headerlink" title="2.SpringMVC环境搭建"></a>2.SpringMVC环境搭建</h2><h5 id="2-1-SpringMVC是什么？"><a href="#2-1-SpringMVC是什么？" class="headerlink" title="2.1  SpringMVC是什么？"></a><strong>2.1  SpringMVC是什么？</strong></h5><pre class=" language-swift"><code class="language-swift"><span class="token number">1</span><span class="token punctuation">.</span> <span class="token builtin">SpringMVC</span>的概述
+<span class="token number">1</span><span class="token punctuation">.</span> 是一种基于<span class="token builtin">Java</span>实现的<span class="token constant">MVC</span>设计模型的请求驱动类型的轻量级<span class="token constant">WEB</span>框架。
+<span class="token number">2</span><span class="token punctuation">.</span> <span class="token builtin">Spring</span> <span class="token constant">MVC</span>属于<span class="token builtin">SpringFrameWork的后续产品，已经融合在Spring</span> <span class="token builtin">Web</span> <span class="token builtin">Flow里面。Spring</span> 框架提供
+了构建 <span class="token builtin">Web</span> 应用程序的全功能 <span class="token constant">MVC</span> 模块。
+<span class="token number">3</span><span class="token punctuation">.</span> 使用 <span class="token builtin">Spring</span> 可插入的 <span class="token constant">MVC</span> 架构，从而在使用<span class="token builtin">Spring</span>进行<span class="token constant">WEB</span>开发时，可以选择使用<span class="token builtin">Spring</span>的
+<span class="token builtin">SpringMVC</span>框架或集成其他<span class="token constant">MVC</span>开发框架，如<span class="token function">Struts1</span><span class="token punctuation">(</span>现在一般不用<span class="token punctuation">)</span>，<span class="token builtin">Struts2</span>等。
+<span class="token number">2</span><span class="token punctuation">.</span> <span class="token builtin">SpringMVC</span>在三层架构中的位置
+<span class="token number">1</span><span class="token punctuation">.</span> 表现层框架
+<span class="token number">3</span><span class="token punctuation">.</span> <span class="token builtin">SpringMVC</span>的优势
+<span class="token number">4</span><span class="token punctuation">.</span> <span class="token builtin">SpringMVC和Struts2</span>框架的对比</code></pre>
+<h5 id="2-2-SpringMVC坐标库"><a href="#2-2-SpringMVC坐标库" class="headerlink" title="2.2  SpringMVC坐标库"></a><strong>2.2  SpringMVC坐标库</strong></h5><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+      <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>spring<span class="token operator">-</span>context<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span>$<span class="token punctuation">{</span>spring<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+
+
+
+    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+      <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>spring<span class="token operator">-</span>web<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span>$<span class="token punctuation">{</span>spring<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+
+
+    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+      <span class="token operator">&lt;</span>groupId<span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>spring<span class="token operator">-</span>webmvc<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span>$<span class="token punctuation">{</span>spring<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+
+
+
+    <span class="token operator">&lt;</span>dependency<span class="token operator">></span> <span class="token operator">&lt;</span>groupId<span class="token operator">></span>javax<span class="token punctuation">.</span>servlet<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>servlet<span class="token operator">-</span>api<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">2.5</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+      <span class="token operator">&lt;</span>scope<span class="token operator">></span>provided<span class="token operator">&lt;</span><span class="token operator">/</span>scope<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span>
+
+
+    <span class="token operator">&lt;</span>dependency<span class="token operator">></span>
+      <span class="token operator">&lt;</span>groupId<span class="token operator">></span>javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>jsp<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>artifactId<span class="token operator">></span>jsp<span class="token operator">-</span>api<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">></span>
+      <span class="token operator">&lt;</span>version<span class="token operator">></span><span class="token number">2.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">></span>
+      <span class="token operator">&lt;</span>scope<span class="token operator">></span>provided<span class="token operator">&lt;</span><span class="token operator">/</span>scope<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">></span></code></pre>
+<h5 id="2-3-在web-xml配置文件中配置前端控制器（DispatcherServlet）"><a href="#2-3-在web-xml配置文件中配置前端控制器（DispatcherServlet）" class="headerlink" title="2.3  在web.xml配置文件中配置前端控制器（DispatcherServlet）"></a><strong>2.3  在web.xml配置文件中配置前端控制器（DispatcherServlet）</strong></h5><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>servlet<span class="token operator">></span>
+    <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>dispatcherServlet<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>
+    <span class="token operator">&lt;</span>servlet<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>DispatcherServlet<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>
+
+  <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>mapping<span class="token operator">></span>
+    <span class="token operator">&lt;</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>dispatcherServlet<span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>name<span class="token operator">></span>
+    <span class="token operator">&lt;</span>url<span class="token operator">-</span>pattern<span class="token operator">></span><span class="token operator">/</span><span class="token operator">&lt;</span><span class="token operator">/</span>url<span class="token operator">-</span>pattern<span class="token operator">></span> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 配置拦截路径 <span class="token operator">--</span><span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>servlet<span class="token operator">-</span>mapping<span class="token operator">></span></code></pre>
+<h5 id="2-4-在资源文件下（resources）创建springmvc-xml"><a href="#2-4-在资源文件下（resources）创建springmvc-xml" class="headerlink" title="2.4  在资源文件下（resources）创建springmvc.xml"></a><strong>2.4  在资源文件下（resources）创建springmvc.xml</strong></h5><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>beans xmlns<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/beans"</span>
+       xmlns<span class="token operator">:</span>mvc<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/mvc"</span>
+       xmlns<span class="token operator">:</span>context<span class="token operator">=</span><span class="token string">"http://www.springframework.org/schema/context"</span>
+       xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span>
+       xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span>" http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans 
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>beans<span class="token operator">/</span>spring<span class="token operator">-</span>beans<span class="token punctuation">.</span>xsd 
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>mvc 
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>mvc<span class="token operator">/</span>spring<span class="token operator">-</span>mvc<span class="token punctuation">.</span>xsd 
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context 
+       http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>org<span class="token operator">/</span>schema<span class="token operator">/</span>context<span class="token operator">/</span>spring<span class="token operator">-</span>context<span class="token punctuation">.</span>xsd"<span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 扫描包 <span class="token operator">--</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>context<span class="token operator">:</span>component<span class="token operator">-</span>scan base<span class="token operator">-</span><span class="token keyword">package</span><span class="token operator">=</span><span class="token string">"cn.itcast.controller"</span><span class="token operator">/</span><span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 配置视图解析器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>bean id<span class="token operator">=</span><span class="token string">"internalResourceViewResolver"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"prefix"</span> value<span class="token operator">=</span><span class="token string">"/WEB-INF/pages/"</span><span class="token operator">/</span><span class="token operator">></span>
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"suffix"</span> value<span class="token operator">=</span><span class="token string">".jsp"</span><span class="token operator">/</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 开启配置器 <span class="token operator">--</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>mvc<span class="token operator">:</span>annotation<span class="token operator">-</span>driven<span class="token operator">/</span><span class="token operator">></span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>beans<span class="token operator">></span></code></pre>
+<h5 id="2-5-创建HelloControllerDemo-类（Controller）"><a href="#2-5-创建HelloControllerDemo-类（Controller）" class="headerlink" title="2.5  创建HelloControllerDemo 类（Controller）"></a><strong>2.5  创建HelloControllerDemo 类（Controller）</strong></h5><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloControllerDemo</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/hello"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">sayHello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Welcome springmvc ... "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="2-6-在index-jsp中配置一个超链接，用来测试SpringMVC环境配置是否成功"><a href="#2-6-在index-jsp中配置一个超链接，用来测试SpringMVC环境配置是否成功" class="headerlink" title="2.6 在index.jsp中配置一个超链接，用来测试SpringMVC环境配置是否成功"></a><strong>2.6 在index.jsp中配置一个超链接，用来测试SpringMVC环境配置是否成功</strong></h5><pre class=" language-java"><code class="language-java"><span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"hello"</span><span class="token operator">></span>入门开始<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span></code></pre>
+<p><strong>注意：这里先选择性忽略部分注解的属性，先了解如何入门即可，在之后小编会做出注解的使用以及解释，这里主要是搭建环境测试是否入门</strong></p>
+<h5 id="2-6-1-在WEB-INF下创建pages文件夹，在pages文件夹中创建success-jsp文件"><a href="#2-6-1-在WEB-INF下创建pages文件夹，在pages文件夹中创建success-jsp文件" class="headerlink" title="2.6.1  在WEB-INF下创建pages文件夹，在pages文件夹中创建success.jsp文件"></a><strong>2.6.1  在WEB-INF下创建pages文件夹，在pages文件夹中创建success.jsp文件</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428140804739.png" alt="在这里插入图片描述"></p>
+<h5 id="2-7-配置Tomcat-这里小编以图文形式来讲解"><a href="#2-7-配置Tomcat-这里小编以图文形式来讲解" class="headerlink" title="2.7 配置Tomcat,这里小编以图文形式来讲解"></a><strong>2.7 配置Tomcat,这里小编以图文形式来讲解</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428130742265.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2-7-1-创建Local-Tomcat"><a href="#2-7-1-创建Local-Tomcat" class="headerlink" title="2.7.1  创建Local Tomcat"></a><strong>2.7.1  创建Local Tomcat</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428131037967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>2.7.2  创建环境部署</strong><img src="https://img-blog.csdnimg.cn/20200428131222999.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2-7-3-添加项目部署"><a href="#2-7-3-添加项目部署" class="headerlink" title="2.7.3  添加项目部署"></a><strong>2.7.3  添加项目部署</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428131312749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2-7-4-设置虚拟路径"><a href="#2-7-4-设置虚拟路径" class="headerlink" title="2.7.4  设置虚拟路径"></a><strong>2.7.4  设置虚拟路径</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428131413663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h5 id="2-8-启动服务器-进行测试"><a href="#2-8-启动服务器-进行测试" class="headerlink" title="2.8  启动服务器,进行测试"></a><strong>2.8  启动服务器,进行测试</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200428140418586.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<pre class=" language-handlebars"><code class="language-handlebars">控制台输出：Welcome springmvc ... </code></pre>
+<p><strong>最后跳转到界面：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200428140529937.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>好了，这里就是SpringMVC的入门架构了</strong></p>
+
             </div>
             <hr/>
 
@@ -551,7 +682,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://NoMessages.github.io.git/thrid/index.html">https://NoMessages.github.io.git/thrid/index.html</a>
+                    <a href="https://NoMessages.github.io.git/2020/06/14/springmvc-8/">https://NoMessages.github.io.git/2020/06/14/springmvc-8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -588,7 +719,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -757,7 +896,7 @@
         repo: 'NoMessages.github.io',
         owner: 'NoMessages',
         admin: '"1051141360@qq.com"',
-        id: '2020 - 06 - 12T16 - 41 - 25 ',
+        id: '2020 - 06 - 14T10 - 34 - 14 ',
         distractionFreeMode: false // Facebook-like distraction free mode
     });
 
@@ -780,39 +919,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/thrid/index.html">
+                <a href="/2020/06/14/springmvc-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="thrid">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringMVC 学习心得（二）">
                         
-                        <span class="card-title">thrid</span>
+                        <span class="card-title">SpringMVC 学习心得（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            在上一章节小编讲述了SpringMVC入门案例，通过配置 前端控制器 ， 视图解析器，初始化加载配置文件等等一系列步骤，下面小编继续讲解上章节的疑惑注解@RequestMapping
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -820,37 +977,55 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/thrid/index.html">
+                <a href="/2020/06/11/springmvc-1/">
                     <div class="card-image">
                         
+                        <img src="/images/5.jpg" class="responsive-img" alt="SpringMVC 学习心得（八）">
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="thrid">
-                        
-                        <span class="card-title">thrid</span>
+                        <span class="card-title">SpringMVC 学习心得（八）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            异常流程处理过程，出现异常之后都会默认向上抛出异常直到有人处理，如果整个过程中一直没有人去处理，那么将会将异常抛给浏览器（也就是用户），这样对用户的体验是非常不友好的，所以我们应该要手动去处理这些异常，以展示友好界面
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-11
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>

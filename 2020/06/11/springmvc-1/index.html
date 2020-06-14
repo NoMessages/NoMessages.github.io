@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, Share Cat">
+    <meta name="keywords" content="SpringMVC 学习心得（八）, Share Cat">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tags | Share Cat</title>
+    <title>SpringMVC 学习心得（八） | Share Cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -356,12 +356,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tags</h1>
+                    <h1 class="description center-align post-title">SpringMVC 学习心得（八）</h1>
                 </div>
             </div>
         </div>
@@ -371,22 +371,138 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
+                            </a>
+                        
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                SpringMVC
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -395,28 +511,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-11
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-13
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    4 Min
                 </div>
                 
 
@@ -431,7 +547,77 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>FirTags – &gt; Link</p>
+                <h2 id="SpringMVC-学习心得-（八）"><a href="#SpringMVC-学习心得-（八）" class="headerlink" title="SpringMVC 学习心得 （八）"></a>SpringMVC 学习心得 （八）</h2><p><strong>异常流程处理过程，出现异常之后都会默认向上抛出异常直到有人处理，如果整个过程中一直没有人去处理，那么将会将异常抛给浏览器（也就是用户），这样对用户的体验是非常不友好的，所以我们应该要手动去处理这些异常，以展示友好界面</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/2020052817052197.png" alt></p>
+<h3 id="1-、自定义异常处理器"><a href="#1-、自定义异常处理器" class="headerlink" title="1)、自定义异常处理器"></a>1)、自定义异常处理器</h3><h5 id="1-自定义异常SysException类"><a href="#1-自定义异常SysException类" class="headerlink" title="1).自定义异常SysException类"></a>1).自定义异常SysException类</h5><blockquote>
+<p>public class SysException extends Exception {<br>    private String msg;</p>
+<p>public SysException(String msg) {<br>    this.msg = msg;<br>}</p>
+<p>public String getMsg() {<br>    return msg;<br>}</p>
+<p>public void setMsg(String msg) {<br>    this.msg = msg;<br>}</p>
+<p>}</p>
+</blockquote>
+<h5 id="2-实现HandlerExceptionResolver"><a href="#2-实现HandlerExceptionResolver" class="headerlink" title="2).实现HandlerExceptionResolver"></a>2).实现HandlerExceptionResolver</h5><blockquote>
+<p>public class SysExceptionResolver implements HandlerExceptionResolver {</p>
+<p>@Override<br>public ModelAndView resolveException(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) {<br>    //controller 抛出的异常对象Exception ex<br>        SysException sys = null;<br>    if(e instanceof SysException){<br>        sys = (SysException) e;<br>    }else{<br>    //如果没有就抛出异常<br>        sys = new SysException(“服务器异常”);<br>    }<br>    //创建modelAndView对象<br>    ModelAndView modelAndView = new ModelAndView();<br>    modelAndView.addObject(“msg”,sys.getMsg());<br>    //选择异常跳转视图<br>    modelAndView.setViewName(“error”);<br>    return modelAndView;<br>}</p>
+<p>}</p>
+</blockquote>
+<h5 id="3-、配置异常处理器"><a href="#3-、配置异常处理器" class="headerlink" title="3)、配置异常处理器"></a>3)、配置异常处理器</h5><blockquote>
+<p> &lt; bean id=”sysExceptionResolver” class=”cn.itcast.exception.SysExceptionResolver” /&gt;</p>
+</blockquote>
+<h3 id="2-、拦截器（Interceptor）"><a href="#2-、拦截器（Interceptor）" class="headerlink" title="2)、拦截器（Interceptor）"></a>2)、拦截器（Interceptor）</h3><h5 id="1-拦截器和过滤器的区别？"><a href="#1-拦截器和过滤器的区别？" class="headerlink" title="1).拦截器和过滤器的区别？"></a>1).拦截器和过滤器的区别？</h5><blockquote>
+<ol>
+<li>过滤器是Servlet规范的一部分，任何框架都可以使用过滤器技术</li>
+<li>拦截器是<strong>SpringMVC框架独有的</strong></li>
+<li>过滤器配置了/*，可以拦截任何资源。</li>
+<li>拦截器只会对<strong>控制器中的方法</strong>进行拦截</li>
+</ol>
+</blockquote>
+<h5 id="2-自定义拦截器步骤"><a href="#2-自定义拦截器步骤" class="headerlink" title="2).自定义拦截器步骤"></a>2).自定义拦截器步骤</h5><p><strong>1.实现HandlerInterceptor接口，重写public boolean preHandle（）方法</strong></p>
+<blockquote>
+<p>public class MyInteceptorHandler implements HandlerInterceptor {<br>    //最先被执行，在controller之前<br>    @Override<br>    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {<br>        System.out.println(“拦截器开始执行咯。。”);<br>        return true;<br>    }<br>//在controller执行之后再执行<br>    @Override<br>    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {<br>        System.out.println(“posthandle…”);<br>        //这里实现页面转发，跳到index.jsp页面中<br>        request.getRequestDispatcher(“/index.jsp”).forward(request,re    sponse);<br>        System.out.println(“拦截器执行完咯。。”);</p>
+<p>}</p>
+<p>//在之后执行的方法<br>    @Override<br>    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {<br>        System.out.println(“拦截器执行完之后咯。。”);<br>    }<br>}</p>
+</blockquote>
+<p><strong>2.配置springmvc配置文件注册拦截器作用范围</strong></p>
+<blockquote>
+<p>  <a href="mvc:interceptors">mvc:interceptors</a><br>        <a href="mvc:interceptor">mvc:interceptor</a><br>            <!-- 设置哪些路径被拦截 --><br>            &lt;mvc:mapping path=”/hello”/&gt;<br>            <!-- 设置哪些路径不被拦截 --><br>            &lt;mvc:exclude-mapping path=”/“/&gt;<br>            <bean id="myInteceptorHandler" class="cn.itcast.controller.MyInteceptorHandler"><br>        <br>    </bean></p>
+</blockquote>
+<p><strong>3.controller跳转到success.jsp界面</strong></p>
+<blockquote>
+<p>@RequestMapping(“/hello”)<br>    public String hello(){<br>        System.out.println(“hello方法。。。”);<br>        return “success”;<br>    }</p>
+</blockquote>
+<p><strong>注意：小编在index.jsp和success.jsp中都输出了一句话以证明拦截器的执行流程</strong></p>
+<h5 id="3-拦截器执行过程"><a href="#3-拦截器执行过程" class="headerlink" title="3).拦截器执行过程"></a>3).拦截器执行过程</h5><p><img src="https://img-blog.csdnimg.cn/20200528194212163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt><br><strong>控制台打印，首先走的是preHandle方法，其次就是controller,然后走的postHandle方法，再走的controller的视图解析器，最后走的afterHandle方法</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200528195846130.png" alt><br><strong>注意：最后显示的视图是index.jsp视图，原因是 如果postHandler中指定了跳转的页面，那么controller方法跳转的页面将不会显示，所以最终显示的是index.jsp界面</strong><br><img src="https://img-blog.csdnimg.cn/20200528200159121.png" alt="在这里插入图片描述"></p>
+<h5 id="4-单个拦截器使用总结"><a href="#4-单个拦截器使用总结" class="headerlink" title="4).单个拦截器使用总结"></a>4).单个拦截器使用总结</h5><blockquote>
+<ol>
+<li>preHandle方法是controller方法执行前拦截的方法<ol>
+<li>可以使用request或者response跳转到指定的页面</li>
+<li>return true放行，执行下一个拦截器，如果没有拦截器，执行controller中的方法。</li>
+<li>return false不放行，不会执行controller中的方法。</li>
+</ol>
+</li>
+<li>postHandle是controller方法执行后执行的方法，在JSP视图执行前。<ol>
+<li>可以使用request或者response跳转到指定的页面</li>
+<li>如果指定了跳转的页面，那么controller方法跳转的页面将不会显示。</li>
+</ol>
+</li>
+<li>postHandle方法是在JSP执行后执行<ol>
+<li>request或者response不能再跳转页面了</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<h3 id="3-、多个拦截器定义的使用"><a href="#3-、多个拦截器定义的使用" class="headerlink" title="3)、多个拦截器定义的使用"></a>3)、多个拦截器定义的使用</h3><h5 id="1-执行顺序？"><a href="#1-执行顺序？" class="headerlink" title="1).执行顺序？"></a>1).执行顺序？</h5><p><strong>a).多个拦截器全部都放行的执行顺序：</strong><br><img src="https://img-blog.csdnimg.cn/20200528204821734.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
+<blockquote>
+<p>拦截器111开始执行咯。。<br>拦截器2开始执行咯。。<br>hello方法。。。<br>拦截器执2行完咯。。<br>拦截器执2行完之后咯。。<br>拦截器111执行完之后咯。。</p>
+</blockquote>
+<p><strong>b).多个拦截器后者不放行的执行顺序：</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20200528205907818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzQwOTk5NA==,size_16,color_FFFFFF,t_70" alt></p>
+<blockquote>
+<p>控制台打印：<br>拦截器111开始执行咯。。<br>拦截器2开始执行咯。。<br>拦截器111执行完之后咯。。</p>
+</blockquote>
+<p><strong>这里小编对没有页面显示也还有些疑问，显示的是空白页面，在不断的学习和探索之后再进行回更，多拦截器执行原理！</strong></p>
 
             </div>
             <hr/>
@@ -457,7 +643,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://NoMessages.github.io.git/tags/index.html">https://NoMessages.github.io.git/tags/index.html</a>
+                    <a href="https://NoMessages.github.io.git/2020/06/11/springmvc-1/">https://NoMessages.github.io.git/2020/06/11/springmvc-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -494,7 +680,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -663,7 +857,7 @@
         repo: 'NoMessages.github.io',
         owner: 'NoMessages',
         admin: '"1051141360@qq.com"',
-        id: '2020 - 06 - 12T09 - 45 - 24 ',
+        id: '2020 - 06 - 11T09 - 25 - 00 ',
         distractionFreeMode: false // Facebook-like distraction free mode
     });
 
@@ -686,40 +880,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/14/springmvc-8/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="SpringMVC 学习心得（一）">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">SpringMVC 学习心得（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            FirTags – &gt; Link
-
+                            在小编总结完Spring的学习笔记之后，紧接着更新SpringMVC的学习笔记，也正是因为SpringMVC是基于Spring的，在整理Spring学习心得的过程中，有很多半懵半懂的地方在整理的过程中慢慢理解，慢慢强化自己的知识点
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -730,35 +941,53 @@
                 Current&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/11/springmvc-1/">
                     <div class="card-image">
                         
+                        <img src="/images/5.jpg" class="responsive-img" alt="SpringMVC 学习心得（八）">
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
-                        
-                        <span class="card-title">tags</span>
+                        <span class="card-title">SpringMVC 学习心得（八）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            FirTags – &gt; Link
-
+                            异常流程处理过程，出现异常之后都会默认向上抛出异常直到有人处理，如果整个过程中一直没有人去处理，那么将会将异常抛给浏览器（也就是用户），这样对用户的体验是非常不友好的，所以我们应该要手动去处理这些异常，以展示友好界面
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-11
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -827,6 +1056,100 @@
 
 <!-- 代码块折行 -->
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('10'),
+            headingSelector: 'h1,h2, h3, h4,h5,h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5,h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

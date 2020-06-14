@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Tags, Share Cat">
+    <meta name="keywords" content="SpringMVC 学习心得（三）, Share Cat">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Tags | Share Cat</title>
+    <title>SpringMVC 学习心得（三） | Share Cat</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -361,7 +361,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">tags</h1>
+                    <h1 class="description center-align post-title">SpringMVC 学习心得（三）</h1>
                 </div>
             </div>
         </div>
@@ -371,22 +371,138 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Spring/">
+                                <span class="chip bg-color">Spring</span>
+                            </a>
+                        
+                            <a href="/tags/SpringMVC/">
+                                <span class="chip bg-color">SpringMVC</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Spring/" class="post-category">
+                                Spring
+                            </a>
+                        
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                SpringMVC
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -395,28 +511,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-12
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-13
+                    2020-06-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    3
+                    419
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    2 Min
                 </div>
                 
 
@@ -431,7 +547,63 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>FirTags – &gt; Link</p>
+                <p><strong>应用场景：我们在数据库中定义了出生日期字段类型为date，在浏览器中的form表单中填写数据，springmvc内置了十种过滤器模式，当你将日期写成xx/xx/xx格式可以被内置解析，但是xx-xx-xx这种格式会抛出 400 Bad Request请求异常，所以我们自定义过滤器配置使用</strong></p>
+<h2 id="1-实现接口Converter-lt-S-T-gt"><a href="#1-实现接口Converter-lt-S-T-gt" class="headerlink" title="1.实现接口Converter&lt;S,T&gt;"></a>1.实现接口Converter&lt;S,T&gt;</h2><h5 id="1-1-创建StringDateFormat类"><a href="#1-1-创建StringDateFormat类" class="headerlink" title="1.1 创建StringDateFormat类"></a><strong>1.1 创建StringDateFormat类</strong></h5><pre class=" language-java"><code class="language-java">      <span class="token comment" spellcheck="true">/*
+       类型转换
+     */</span>
+    <span class="token keyword">public</span> Date <span class="token function">convert</span><span class="token punctuation">(</span>String s<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>s <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"参数不能为空"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 解析字符串 Date date = df.parse(source); return date;</span>
+            DateFormat df <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">SimpleDateFormat</span><span class="token punctuation">(</span><span class="token string">"yyyy-MM-dd"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            Date date <span class="token operator">=</span> df<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> date<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"类型转换错误"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span></code></pre>
+<h5 id="1-2-在springmvc配置文件中配置ConversionServiceFactoryBean工厂"><a href="#1-2-在springmvc配置文件中配置ConversionServiceFactoryBean工厂" class="headerlink" title="1.2 在springmvc配置文件中配置ConversionServiceFactoryBean工厂"></a><strong>1.2 在springmvc配置文件中配置ConversionServiceFactoryBean工厂</strong></h5><pre class=" language-java"><code class="language-java"> <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"org.springframework.context.support.ConversionServiceFactoryBean"</span> id<span class="token operator">=</span><span class="token string">"conversionService"</span><span class="token operator">></span>
+
+        <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"converters"</span><span class="token operator">></span>
+            <span class="token operator">&lt;</span>set<span class="token operator">></span>
+                <span class="token operator">&lt;</span>bean <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"cn.itcast.controller.StringDateFormate"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>set<span class="token operator">></span>
+
+        <span class="token operator">&lt;</span><span class="token operator">/</span>property<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>bean<span class="token operator">></span></code></pre>
+<h5 id="1-3-模拟实体类"><a href="#1-3-模拟实体类" class="headerlink" title="1.3 模拟实体类"></a><strong>1.3 模拟实体类</strong></h5><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserAccount</span> <span class="token keyword">implements</span> <span class="token class-name">Serializable</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> Date date<span class="token punctuation">;</span>
+
+        <span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>省略toString <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="1-4-在没添加之前输入xx-xx-xx发出错误请求界面："><a href="#1-4-在没添加之前输入xx-xx-xx发出错误请求界面：" class="headerlink" title="1.4 在没添加之前输入xx-xx-xx发出错误请求界面："></a><strong>1.4 在没添加之前输入xx-xx-xx发出错误请求界面：</strong></h5><p><img src="https://img-blog.csdnimg.cn/20200503105902135.png" alt><br><strong>2.编写Controller类</strong></p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/getDate"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> String <span class="token function">getDate</span><span class="token punctuation">(</span>UserAccount account<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"date : "</span> <span class="token operator">+</span> account<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">"success"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p><strong>2.1  输入xx-xx-xx日期类型，控制台输出结果为：</strong></p>
+<pre class=" language-handlebars"><code class="language-handlebars">date : UserAccount{date=Tue Dec 11 00:00:00 CST 1212}</code></pre>
+<h2 id="2-中文乱码问题解决"><a href="#2-中文乱码问题解决" class="headerlink" title="2.中文乱码问题解决"></a>2.中文乱码问题解决</h2><pre class=" language-java"><code class="language-java"> <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 配置过滤器  <span class="token operator">--</span><span class="token operator">></span>
+
+  <span class="token operator">&lt;</span>filter<span class="token operator">></span>
+    <span class="token operator">&lt;</span>filter<span class="token operator">-</span>name<span class="token operator">></span>characterEncodingFilter<span class="token operator">&lt;</span><span class="token operator">/</span>filter<span class="token operator">-</span>name<span class="token operator">></span>
+    <span class="token operator">&lt;</span>filter<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>filter<span class="token punctuation">.</span>CharacterEncodingFilter<span class="token operator">&lt;</span><span class="token operator">/</span>filter<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">></span>
+    <span class="token operator">&lt;</span>init<span class="token operator">-</span>param<span class="token operator">></span>
+      <span class="token operator">&lt;</span>param<span class="token operator">-</span>name<span class="token operator">></span>encoding<span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>name<span class="token operator">></span>
+      <span class="token operator">&lt;</span>param<span class="token operator">-</span>value<span class="token operator">></span>UTF<span class="token operator">-</span><span class="token number">8</span><span class="token operator">&lt;</span><span class="token operator">/</span>param<span class="token operator">-</span>value<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>init<span class="token operator">-</span>param<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>filter<span class="token operator">></span>
+  <span class="token operator">&lt;</span>filter<span class="token operator">-</span>mapping<span class="token operator">></span>
+    <span class="token operator">&lt;</span>filter<span class="token operator">-</span>name<span class="token operator">></span>characterEncodingFilter<span class="token operator">&lt;</span><span class="token operator">/</span>filter<span class="token operator">-</span>name<span class="token operator">></span>
+    <span class="token operator">&lt;</span>url<span class="token operator">-</span>pattern<span class="token operator">></span><span class="token operator">/</span><span class="token operator">*</span><span class="token operator">&lt;</span><span class="token operator">/</span>url<span class="token operator">-</span>pattern<span class="token operator">></span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>filter<span class="token operator">-</span>mapping<span class="token operator">></span></code></pre>
+<p><strong>好了，这就是简易自定义过滤器的使用了，有什么不同的见解可以一起探讨</strong></p>
 
             </div>
             <hr/>
@@ -457,7 +629,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://NoMessages.github.io.git/tags/index.html">https://NoMessages.github.io.git/tags/index.html</a>
+                    <a href="https://NoMessages.github.io.git/2020/06/14/springmvc-3/">https://NoMessages.github.io.git/2020/06/14/springmvc-3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -494,7 +666,15 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Spring/">
+                                    <span class="chip bg-color">Spring</span>
+                                </a>
+                            
+                                <a href="/tags/SpringMVC/">
+                                    <span class="chip bg-color">SpringMVC</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -663,7 +843,7 @@
         repo: 'NoMessages.github.io',
         owner: 'NoMessages',
         admin: '"1051141360@qq.com"',
-        id: '2020 - 06 - 12T09 - 45 - 24 ',
+        id: '2020 - 06 - 14T10 - 41 - 21 ',
         distractionFreeMode: false // Facebook-like distraction free mode
     });
 
@@ -686,40 +866,57 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/14/springmvc-4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="SpringMVC 学习心得(四)">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">SpringMVC 学习心得(四)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            FirTags – &gt; Link
-
+                            在springmvc中，许多注解能够帮助我们大大提高开发效率，这里小编讲述一下最常见的七种注解
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -727,38 +924,56 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/tags/index.html">
+                <a href="/2020/06/14/springmvc-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="tags">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="SpringMVC 学习心得（二）">
                         
-                        <span class="card-title">tags</span>
+                        <span class="card-title">SpringMVC 学习心得（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            FirTags – &gt; Link
-
+                            在上一章节小编讲述了SpringMVC入门案例，通过配置 前端控制器 ， 视图解析器，初始化加载配置文件等等一系列步骤，下面小编继续讲解上章节的疑惑注解@RequestMapping
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-14
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JHua_Rocy
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
+                                </a>
+                            
+                            <a href="/categories/Spring/SpringMVC/" class="post-category">
+                                    SpringMVC
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring/">
+                        <span class="chip bg-color">Spring</span>
+                    </a>
+                    
+                    <a href="/tags/SpringMVC/">
+                        <span class="chip bg-color">SpringMVC</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -827,6 +1042,100 @@
 
 <!-- 代码块折行 -->
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('10'),
+            headingSelector: 'h1,h2, h3, h4,h5,h6'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1,h2, h3, h4,h5,h6').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 
